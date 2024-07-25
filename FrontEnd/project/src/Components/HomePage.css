@@ -1,0 +1,31 @@
+/* HomePage.css */
+.homepage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the page takes up at least the full viewport height */
+}
+
+.header {
+    margin-bottom: 20px; /* Adds space between the header and the body */
+}
+
+.body {
+    flex: 1; /* Allows the body to take up the remaining space between header and footer */
+}
+
+.footer {
+    margin-top: 20px; /* Adds space between the body and the footer */
+    padding: 20px;
+}
+
+/* Ensure all components fit nicely within the page */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header,
+    .body,
+    .footer {
+        padding: 0 10px;
+    }
+}

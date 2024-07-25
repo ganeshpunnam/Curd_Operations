@@ -1,0 +1,109 @@
+
+.login-maincontainer{
+    width: 100vw;
+    height: 100vh;
+ 
+    background-color: yellow;
+  
+
+}
+.backButton{
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+}
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: slideIn 0.5s ease-out;
+    height: fit-content;
+    margin: auto;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.form-group input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.signup-link {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.signup-link a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #000;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
