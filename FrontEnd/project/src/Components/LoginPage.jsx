@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './LoginPage.css';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Import the CSS
 
 const API_URL = 'http://localhost:3500';
 
@@ -19,11 +21,11 @@ const Login = () => {
           setData(response.data);
         } else {
           console.error('Expected array but got:', response.data);
-          alert('Unexpected data format');
+          toast.error('Unexpected data format');
         }
       } catch (error) {
         console.error('Error fetching data:', error);
-        alert('Error fetching data');
+        toast.error('Error fetching data');
       }
     }
     loadData();
@@ -39,14 +41,20 @@ const Login = () => {
 
   const loginCheck = (event) => {
     event.preventDefault();
-    const userExists = data.some(user => 
-      user.Username === inputValue && user.Password === inputPassword
-    );
+   
 
-    if (userExists) {
-      navigate('/MainHomePage');
-    } else {
-      alert('Incorrect details');
+    if ( data.some(user => user.Username === inputValue && user.Password === inputPassword)) {
+      toast.success('Login successful! Redirecting...');
+      setTimeout(() => {
+        navigate('/MainHomePage');
+      }, 2000);
+    } 
+    else if( inputValue === "Ganesh@gmail.com" && inputPassword === "Ganesh@gmail.com"){
+      toast.success('Login Admin successful! Redirecting...');
+      navigate('/Admin')
+    }
+    else {
+      toast.error('Incorrect details');
     }
   };
 
@@ -84,6 +92,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer /> {/* Add the ToastContainer component */}
     </div>
   );
 }

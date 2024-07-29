@@ -1,7 +1,52 @@
 .body {
     padding: 20px;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 }
+
+.body {
+    padding: 16px;
+  }
+  button{
+    margin: 0px;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff; 
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  .mainbox{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .product-card h2 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+  }
+  
+  .product-card p {
+    margin: 8px 0;
+  }
+
+  
 
 .hero {
     background-color: #FFEB3B; /* Yellow background */

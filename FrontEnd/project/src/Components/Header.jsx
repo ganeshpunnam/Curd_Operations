@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faInfoCircle, faCogs, faEnvelope, faSignInAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import './Header.css';
 import { Link ,useNavigate} from 'react-router-dom';
+import Cart from './Cart';
 
 const Header = () => {
     const Navigate = useNavigate();
@@ -21,6 +22,7 @@ const Header = () => {
           </ul>
         </nav>
         <div className="auth-links">
+        <Link to={'/cart'} className="auth-link2"> Cart</Link>
         <Link to={'/LoginPage'} className="auth-link"><FontAwesomeIcon icon={faSignInAlt} /> LogOut</Link>
         </div>
       </div>

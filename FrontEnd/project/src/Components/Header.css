@@ -25,7 +25,13 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
+.auth-link2{
+    padding: 7px 13px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+}
 .logo h1 {
     font-size: 30px;
     font-weight: 700;
