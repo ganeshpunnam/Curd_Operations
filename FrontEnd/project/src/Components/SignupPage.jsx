@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
 
-const API_URL = 'http://localhost:3500';
+const API_URL = 'https://curd-operations-six.vercel.app/';
 
 const Signup = () => {
   const [username, setUsername] = useState('');
