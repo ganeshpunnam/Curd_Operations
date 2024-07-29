@@ -5,7 +5,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // Import the CSS
 
-const API_URL = 'http://localhost:3500';
+const API_URL = 'https://curd-operations-six.vercel.app/';
 
 const Login = () => {
   const navigate = useNavigate();
